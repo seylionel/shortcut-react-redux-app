@@ -3,6 +3,8 @@ import {createStore, applyMiddleware} from "redux";
 import {Provider} from "react-redux";
 import thunkMiddleware from "redux-thunk";
 import {composeWithDevTools} from "redux-devtools-extension";
+import reducers from "./reducers/reducers";
+import {fetchShortcuts} from "./actions/actions";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
 import HomePage from "./components/pages/home/HomePage";
@@ -12,9 +14,11 @@ import 'bootstrap';
 import './App.scss';
 
 const store = createStore(
-  null, // TODO: call reducer
+  reducers,
   composeWithDevTools(applyMiddleware(thunkMiddleware))
 );
+
+store.dispatch(fetchShortcuts());
 
 function App() {
   return (

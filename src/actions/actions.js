@@ -7,7 +7,7 @@ export function fetchShortcuts() {
     dispatch(fetchShortcutsPending());
     fetch('http://127.0.0.1:8000/api/shortcuts')
       .then(response => response.json())
-      .then(data => dispatch(fetchShortcutsSuccess(data)))
+      .then(data => dispatch(fetchShortcutsSuccess(data['hydra:member'])))
       .catch(error => dispatch(fetchShortcutsFailure(error)));
   };
 }
