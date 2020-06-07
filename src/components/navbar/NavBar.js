@@ -20,7 +20,7 @@ class NavBar extends Component {
               <NavLink to='/softwares' className='nav-link' activeClassName='active'>Logiciels</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to='/add-shortcut' className='nav-link' activeClassName='active'>Ajouter un raccourcis</NavLink>
+              <NavLink to='/add-shortcut' className='nav-link' activeClassName='active'>Ajouter un raccourci</NavLink>
             </li>
           </ul>
         </div>
