@@ -6,7 +6,7 @@ import {
 
 const initialState = {
   shortcuts: [],
-  error: [],
+  errors: [],
   loading: false
 };
 
