@@ -16,6 +16,7 @@ import DetailsCard from "./components/pages/excerpts/DetailsCard";
 
 import 'bootstrap';
 import './App.scss';
+import DetailsCardContainer from "./components/pages/excerpts/DetailsCardContainer";
 
 const store = createStore(
   reducers,
@@ -32,7 +33,7 @@ function App() {
         <NavBar/>
         <Switch>
           <Route exact path='/' component={HomePage}/>
-          <Route exact path={'/DetailsCard/:id'} component={DetailsCard}/>
+          <Route exact path={'/DetailsCard/:id'} component={DetailsCardContainer}/>
           <Route path='/softwares' component={SoftwaresPage}/>
           <Route path='/add-shortcut' component={AddShortcutPage}/>
         </Switch>

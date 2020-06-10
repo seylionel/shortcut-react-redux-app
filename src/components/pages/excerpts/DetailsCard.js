@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import {connect} from "react-redux";
+import './../../shortcut/card/ShortcutCard.scss';
+
 
 
 
@@ -7,6 +8,7 @@ class DetailsCard extends Component {
     render() {
             const shortcut = this.props.shortcut ? (
                 <div className="shortcut">
+                    <img src={process.env.REACT_APP_UPLOADS_DIR + '/' + this.props.shortcut.software.logo} className="card-img-top" alt={this.props.shortcut.software.name}/>
                     <h2>{this.props.shortcut.title}</h2>
                     <p>{this.props.shortcut.description}</p>
                     <p>{this.props.shortcut.context}</p>
@@ -14,7 +16,7 @@ class DetailsCard extends Component {
 
                 </div>
             ) : (
-                <p>Fail</p>
+                <p>Chargement ...</p>
             );
         return <div className="container">{shortcut}</div>;
     }
@@ -22,12 +24,5 @@ class DetailsCard extends Component {
 
 
 
-const mapStateToProps = (state, ownProps) => {
-    let id = parseInt(ownProps.match.params.id);
-    return{
-        shortcut : state.raccourcis.shortcuts.find(shortcut => shortcut.id ===id)
-    };
 
-};
-
-export default connect (mapStateToProps)(DetailsCard)
+export default DetailsCard;
