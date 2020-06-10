@@ -28,9 +28,14 @@ une variable shortcut. On stock tout cela dans dans shortcuts qui est un objet. 
 qui enverra des informations au state. On stock le tout dans une variable shortcut qui retournera à la fonction MapstattoProps.
 
 
-
-
 - [ ] Afficher la liste des logiciels sur la page "Logiciels"
+
+
+
 - [ ] Pouvoir cliquer sur un logiciel et afficher en dessous la liste des raccourcis liés à ce logiciel
+
+
+
+
 - [ ] Afficher un formulaire sur la page "Ajouter un raccourci"
 - [ ] Enregistrer le nouveau raccourci en base de données lorsque le formulaire est validé

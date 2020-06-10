@@ -1,31 +1,31 @@
 export const FETCH_SHORTCUTS_PENDING = 'FETCH_SHORTCUTS_PENDING';
 export const FETCH_SHORTCUTS_FAILURE = 'FETCH_SHORTCUTS_FAILURE';
 export const FETCH_SHORTCUTS_SUCCESS = 'FETCH_SHORTCUTS_SUCCESS';
-export const FETCH_SOFTWARES_PENDING = 'FETCH_SOFTWARES_PENDING';
-export const FETCH_SOFTWARES_FAILURE = 'FETCH_SOFTWARES_FAILURE';
-export const FETCH_SOFTWARES_SUCCESS = 'FETCH_SOFTWARES_SUCCESS';
+export const FETCH_SOFTWARE_PENDING = 'FETCH_SOFTWARES_PENDING';
+export const FETCH_SOFTWARE_FAILURE = 'FETCH_SOFTWARES_FAILURE';
+export const FETCH_SOFTWARE_SUCCESS = 'FETCH_SOFTWARES_SUCCESS';
 
 
-export function fetchSoftwares() {
+export function fetchSoftware() {
   return dispatch => {
-    dispatch(fetchSoftwaresPending());
-    fetch(process.env.REACT_APP_API_URL + '/sotwares')
+    dispatch(fetchSoftwarePending());
+    fetch(process.env.REACT_APP_API_URL + '/software')
         .then(response => response.json())
-        .then(data => dispatch(fetchSoftwaresSuccess(data['hydra:member'])))
-        .catch(error => dispatch(fetchSoftwaresFailure(error)));
+        .then(data => dispatch(fetchSoftwareSuccess(data['hydra:member'])))
+        .catch(error => dispatch(fetchSoftwareFailure(error)));
   };
 }
 
-export function fetchSoftwaresPending() {
-  return { type: FETCH_SOFTWARES_PENDING, payload: null };
+export function fetchSoftwarePending() {
+  return { type: FETCH_SOFTWARE_PENDING, payload: null };
 }
 
-export function fetchSoftwaresFailure(error) {
-  return { type: FETCH_SOFTWARES_FAILURE, payload: { error: error } };
+export function fetchSoftwareFailure(error) {
+  return { type: FETCH_SOFTWARE_FAILURE, payload: { error: error } };
 }
 
-export function fetchSoftwaresSuccess(softwares) {
-  return { type: FETCH_SOFTWARES_SUCCESS, payload: { shortcuts: softwares } };
+export function fetchSoftwareSuccess(software) {
+  return { type: FETCH_SOFTWARE_SUCCESS, payload: { software: software } };
 }
 
 

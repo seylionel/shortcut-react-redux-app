@@ -5,14 +5,13 @@ import thunkMiddleware from "redux-thunk";
 import {composeWithDevTools} from "redux-devtools-extension";
 import reducers from "./reducers/reducers";
 import {fetchShortcuts} from "./actions/actions";
-import {fetchSoftwares} from "./actions/actions";
+import {fetchSoftware} from "./actions/actions";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
 import HomePage from "./components/pages/home/HomePage";
 import SoftwaresPage from "./components/pages/softwares/SoftwaresPage";
 import AddShortcutPage from "./components/pages/add-shortcut/AddShortcutPage";
-import ExcerptsContainer from "./components/pages/excerpts/ExcerptContainer";
-import DetailsCard from "./components/pages/excerpts/DetailsCard";
+import SoftwareContainer from "./components/pages/softwares/SoftwareContainer";
 
 import 'bootstrap';
 import './App.scss';
@@ -24,7 +23,7 @@ const store = createStore(
 );
 
 store.dispatch(fetchShortcuts());
-store.dispatch(fetchSoftwares())
+store.dispatch(fetchSoftware())
 
 function App() {
   return (
@@ -34,7 +33,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={HomePage}/>
           <Route exact path={'/DetailsCard/:id'} component={DetailsCardContainer}/>
-          <Route path='/softwares' component={SoftwaresPage}/>
+          <Route path='/softwares' component={SoftwareContainer}/>
           <Route path='/add-shortcut' component={AddShortcutPage}/>
         </Switch>
       </BrowserRouter>

@@ -1,16 +1,16 @@
 import {connect} from "react-redux";
-import ShortcutCard from "./ShortcutCard";
+import SoftwaresPage from "./SoftwaresPage";
 
-const mapStateToProps = (state,ownProps) => {
+const mapStateToProps = state => ({
+    software: state.raccourcis.software
+});
 
-
-
-}
 const mapDispatchToProps = dispatch => ({
 
 });
 
+
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(ShortcutCard);
+)(SoftwaresPage);

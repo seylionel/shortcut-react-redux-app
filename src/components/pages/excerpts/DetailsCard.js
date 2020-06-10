@@ -12,6 +12,8 @@ class DetailsCard extends Component {
                     <h2>{this.props.shortcut.title}</h2>
                     <p>{this.props.shortcut.description}</p>
                     <p>{this.props.shortcut.context}</p>
+                    <img src={process.env.REACT_APP_UPLOADS_DIR + '/' + this.props.shortcut.image} className="card-img-top" alt={this.props.shortcut.image}/>
+
 
 
                 </div>
