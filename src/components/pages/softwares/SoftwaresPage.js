@@ -4,7 +4,7 @@ class SoftwaresPage extends Component {
   render() {
     return (
       <div>
-        SoftwaresPage
+
       </div>
     );
   }

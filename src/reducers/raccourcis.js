@@ -10,7 +10,7 @@ const initialState = {
   loading: false
 };
 
-function shortcuts(state = initialState, action) {
+function raccourcis(state = initialState, action) {
   switch (action.type) {
     case FETCH_SHORTCUTS_PENDING:
       return { ...state, loading: true };
@@ -23,4 +23,4 @@ function shortcuts(state = initialState, action) {
   }
 }
 
-export default shortcuts;
+export default raccourcis;

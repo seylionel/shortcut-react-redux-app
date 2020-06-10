@@ -1,6 +1,6 @@
 import {combineReducers} from "redux";
-import shortcuts from "./shortcuts";
+import raccourcis from "./raccourcis";
 
 export default combineReducers({
-  shortcuts
+  raccourcis
 });

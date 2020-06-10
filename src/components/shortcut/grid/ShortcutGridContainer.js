@@ -2,7 +2,7 @@ import {connect} from "react-redux";
 import ShortcutGrid from "./ShortcutGrid";
 
 const mapStateToProps = state => ({
-  shortcuts: state.shortcuts.shortcuts
+  shortcuts: state.raccourcis.shortcuts
 });
 
 const mapDispatchToProps = dispatch => ({
