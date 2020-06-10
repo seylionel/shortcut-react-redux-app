@@ -1,12 +1,11 @@
 import {connect} from "react-redux";
 import ShortcutCard from "./ShortcutCard";
 
-const mapStateToProps = (state,ownProps) => {
+const mapStateToProps = state => ({
+    shortcuts: state.raccourcis.shortcuts
+});
 
 
-
-
-}
 const mapDispatchToProps = dispatch => ({
 
 });
