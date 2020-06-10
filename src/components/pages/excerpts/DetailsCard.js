@@ -14,7 +14,7 @@ class DetailsCard extends Component {
 
                 </div>
             ) : (
-                <p>BDZDQKSKQK</p>
+                <p>Fail</p>
             );
         return <div className="container">{shortcut}</div>;
     }
