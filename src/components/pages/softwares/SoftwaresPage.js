@@ -15,9 +15,9 @@ class SoftwaresPage extends Component {
         .map(software =>
 
           <li className="test" key={software.id}>
-              <img src={process.env.REACT_APP_UPLOADS_DIR + '/' + software.logo} className="card-img-top" alt={software.name}/>
-              <Link to={'/softwares/' + software.id}>
               {software.name}
+              <Link to={'/softwares/' + software.id}>
+                  <img src={process.env.REACT_APP_UPLOADS_DIR + '/' + software.logo} className="card-img-top" alt={software.name}/>
               </Link>
           </li> )
 
@@ -28,7 +28,7 @@ class SoftwaresPage extends Component {
 
     return (
       <div>
-          <ul>{softwaresJsx} </ul>
+          <ul className="test">{softwaresJsx} </ul>
       </div>
     );
   }

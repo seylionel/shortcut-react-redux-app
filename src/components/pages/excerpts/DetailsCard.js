@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import './../../shortcut/card/ShortcutCard.scss';
+import "../../component.scss";
 
 
 
@@ -12,7 +12,7 @@ class DetailsCard extends Component {
                     <h2>{this.props.shortcut.title}</h2>
                     <p>{this.props.shortcut.description}</p>
                     <p>{this.props.shortcut.context}</p>
-                    <img src={process.env.REACT_APP_UPLOADS_DIR + '/' + this.props.shortcut.image} className="card-img-top" alt={this.props.shortcut.image}/>
+                    <img src={process.env.REACT_APP_UPLOADS_DIR + '/' + this.props.shortcut.image} className="card-img-top-2" alt={this.props.shortcut.image}/>
 
 
 

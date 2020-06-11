@@ -12,7 +12,7 @@ class ShortcutCard extends Component {
 
     return (
       <div className="col mb-4  ">
-        <div className="card ">
+        <div className="card test_card__color">
           <div className="card-body test ">
             <Link to={'/DetailsCard/' + shortcut.id} >
               <button className="test_card__button">Voir plus</button>
