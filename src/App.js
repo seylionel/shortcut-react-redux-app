@@ -40,9 +40,8 @@ function App() {
           <Route path='/softwares' component={SoftwareContainer}/>
           <Route path='/add-shortcut' component={AddShortcutPage}/>
         </Switch>
+        <Route path='/softwares/:id' component={SoftwaresShortcutContainer}/>
 
-
-        <Route path={'/SoftwareShortcut/:id'} component={SoftwaresShortcutContainer}/>
       </BrowserRouter>
     </Provider>
   );

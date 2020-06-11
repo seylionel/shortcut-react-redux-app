@@ -16,7 +16,7 @@ class SoftwaresPage extends Component {
 
           <li className="test" key={software.id}>
               <img src={process.env.REACT_APP_UPLOADS_DIR + '/' + software.logo} className="card-img-top" alt={software.name}/>
-              <Link to={'/SoftwareShortcut/' + software.id}>
+              <Link to={'/softwares/' + software.id}>
               {software.name}
               </Link>
           </li> )
@@ -29,9 +29,6 @@ class SoftwaresPage extends Component {
     return (
       <div>
           <ul>{softwaresJsx} </ul>
-          <button>x</button>
-
-
       </div>
     );
   }
