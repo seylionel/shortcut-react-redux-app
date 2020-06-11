@@ -7,37 +7,31 @@ import {Link, Route} from "react-router-dom";
 
 
 
-
-
 class SoftwaresPage extends Component {
   render() {
 
     const {software}=this.props
-      console.log(software)
     const softwaresJsx = software
         .map(software =>
-            <ul className="test">
-          <img src={process.env.REACT_APP_UPLOADS_DIR + '/' + software.logo} className="card-img-top" alt={software.name}/>
 
-
-          <li>
-              <Link to={'softwares/ShortcutCard/'}>
+          <li className="test" key={software.id}>
+              <img src={process.env.REACT_APP_UPLOADS_DIR + '/' + software.logo} className="card-img-top" alt={software.name}/>
+              <Link to={'/SoftwareShortcut/' + software.id}>
               {software.name}
               </Link>
+          </li> )
 
-          </li>
-
-            </ul>);
+            ;
 
 
 
 
     return (
       <div>
-
+          <ul>{softwaresJsx} </ul>
           <button>x</button>
 
-        {softwaresJsx}
+
       </div>
     );
   }

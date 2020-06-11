@@ -34,7 +34,11 @@ qui enverra des informations au state. On stock le tout dans une variable shortc
 
 - [ ] Pouvoir cliquer sur un logiciel et afficher en dessous la liste des raccourcis liés à ce logiciel
 
-
+Tout d'abord il faut créer un container. Dans ce container on fait appelle à l'id grâce à match.params.
+Puis on demande de renvoyer dans la variable shortcuts les données de la clé étrangère software_id. Donc on recherche son id.
+(software.id).
+Le filter permet de filtrer les données en ne récupérant que celles se rapportant à la clée étrangère. Ici il s'agit des shortcuts
+de software.
 
 
 - [ ] Afficher un formulaire sur la page "Ajouter un raccourci"

@@ -17,6 +17,8 @@ import 'bootstrap';
 import './App.scss';
 import DetailsCardContainer from "./components/pages/excerpts/DetailsCardContainer";
 import ShortcutCardContainer from "./components/shortcut/card/ShortcutCardContainer";
+import SoftwaresShortcutContainer from "./components/pages/softwares/SoftwaresShortcutContainer";
+import SoftwareShortcut from "./components/pages/softwares/SoftwareShortcut";
 
 const store = createStore(
   reducers,
@@ -38,6 +40,9 @@ function App() {
           <Route path='/softwares' component={SoftwareContainer}/>
           <Route path='/add-shortcut' component={AddShortcutPage}/>
         </Switch>
+
+
+        <Route path={'/SoftwareShortcut/:id'} component={SoftwaresShortcutContainer}/>
       </BrowserRouter>
     </Provider>
   );
