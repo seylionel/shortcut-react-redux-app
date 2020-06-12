@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import './ShortcutCard.scss';
 import './../../component.scss';
-import {Link, Route} from "react-router-dom";
+import {Link} from "react-router-dom";
+import Loader from 'react-loader-spinner';
 
 
 class ShortcutCard extends Component {
@@ -10,7 +11,15 @@ class ShortcutCard extends Component {
 
     const {shortcut} = this.props;
 
+    if (shortcut.length===0){
+      return <Loader type="Puff" color="#00BFFF" height={100} width={100}
+      />;
+    }
+
+
+
     return (
+
       <div className="col mb-4  ">
         <div className="card test_card__color">
           <div className="card-body test ">

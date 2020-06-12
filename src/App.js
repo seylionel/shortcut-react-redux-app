@@ -9,16 +9,17 @@ import {fetchSoftware} from "./actions/actions";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
 import HomePage from "./components/pages/home/HomePage";
-import SoftwaresPage from "./components/pages/softwares/SoftwaresPage";
 import AddShortcutPage from "./components/pages/add-shortcut/AddShortcutPage";
 import SoftwareContainer from "./components/pages/softwares/SoftwareContainer";
 
 import 'bootstrap';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import './App.scss';
 import DetailsCardContainer from "./components/pages/excerpts/DetailsCardContainer";
 import ShortcutCardContainer from "./components/shortcut/card/ShortcutCardContainer";
 import SoftwaresShortcutContainer from "./components/pages/softwares/SoftwaresShortcutContainer";
-import SoftwareShortcut from "./components/pages/softwares/SoftwareShortcut";
+import ShortcutFilterContainer from "./components/pages/add-shortcut/ShortcutFilterContainer";
+
 
 const store = createStore(
   reducers,
@@ -41,6 +42,7 @@ function App() {
           <Route path='/add-shortcut' component={AddShortcutPage}/>
         </Switch>
         <Route path='/softwares/:id' component={SoftwaresShortcutContainer}/>
+
 
       </BrowserRouter>
     </Provider>

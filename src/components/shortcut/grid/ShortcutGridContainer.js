@@ -3,6 +3,7 @@ import ShortcutGrid from "./ShortcutGrid";
 
 const mapStateToProps = state => ({
   shortcuts: state.raccourcis.shortcuts
+
 });
 
 const mapDispatchToProps = dispatch => ({
